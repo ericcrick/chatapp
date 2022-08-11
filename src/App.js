@@ -1,21 +1,15 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
-
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
+import { Navbar } from './components/Navbar';
+export default function App() {
+  const styles = {
+    appContainer : 'max-w-[720px] mx-auto text-center',
+    sectionContainer : 'flex flex-col h-[90vh] bg-gray-100 mt-10 shadow-xl border relative'
   }
+  return (
+    <div className= { styles.appContainer}>
+      <section className= {styles.sectionContainer}>
+        <Navbar/>
+      </section>
+    </div>
+  )
 }
-
-export default App;
